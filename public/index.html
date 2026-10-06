@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc"><meta name="description" content="Find a remembered photo from a few imperfect clues. A Part 5 prototype for Event Archivists.">
+  <title>MemoryTrail · Find the moment</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+ <button class="brand" data-action="nav" data-view="search" aria-label="MemoryTrail home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>MemoryTrail<small>A PHOTO-RETRIEVAL EXPERIMENT</small></span></button>
+ <nav class="topnav" aria-label="Main navigation"><button data-action="nav" data-view="search" class="active">Find a memory</button><button data-action="nav" data-view="library">My collection</button><button data-action="nav" data-view="history">Search trail</button><button data-action="nav" data-view="insights">Test insights</button></nav>
+ <div class="top-actions"><button id="ai-status" class="status-pill" data-action="settings"><span class="status-dot"></span><span>Checking AI</span></button><button class="button primary small" data-action="upload"><span aria-hidden="true">＋</span> Add photos</button></div>
+</header>
+<div class="app-layout">
+ <aside class="sidebar" aria-label="Collection and search guidance">
+  <div><p class="eyebrow">YOUR COLLECTION</p><div class="collection-switch"><button data-action="collection" data-collection="sample" class="selected">Sample moments <span>12</span></button><button data-action="collection" data-collection="upload">My photos <span id="my-count">0</span></button></div></div>
+  <div class="side-stepper"><p class="eyebrow">A LITTLE MEMORY GOES A LONG WAY</p><div class="step"><span>1</span><div><b>Describe a moment</b><small>People, colors, a tiny detail.</small></div></div><div class="step"><span>2</span><div><b>Explore the possibilities</b><small>See why each photo appears.</small></div></div><div class="step"><span>3</span><div><b>Find your way back</b><small>Refine without starting over.</small></div></div></div>
+  <div class="memory-note"><span class="little-star" aria-hidden="true">✧</span><h3>A date is not a memory.</h3><p>You don’t need an exact year or album. Start with what stayed with you.</p></div>
+  <button class="text-button side-test" data-action="test-setup">Run a retrieval test <span aria-hidden="true">↗</span></button>
+  <div class="privacy-note"><span aria-hidden="true">◈</span><p>Selected photos stay in this browser. AI processing only with your permission.<button data-action="privacy">How it works</button></p></div>
+ </aside>
+ <main id="main" tabindex="-1"><div class="initial-loading">Opening your collection…</div></main>
+</div>
+<dialog id="modal" aria-labelledby="dialog-title"><div id="modal-body"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p>This prototype needs JavaScript enabled to search and store selected photos.</p></noscript>
+</body></html>

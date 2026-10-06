@@ -1,0 +1,14 @@
+{
+  "name": "memorytrail-part5",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Part 5 MVP: memory-aware photo retrieval for Event Archivists",
+  "type": "module",
+  "engines": { "node": ">=18.20.0" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/engine.mjs",
+    "build:preview": "node scripts/build-preview.mjs"
+  }
+}
